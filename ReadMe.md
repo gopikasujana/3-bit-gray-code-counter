@@ -2,6 +2,12 @@
 
 A 3-bit Gray code counter designed in Verilog, verified using a testbench and GTKWave, synthesized using Yosys, and implemented on real hardware as a semester project.
 
+## Hardware Demo Video
+
+[![Watch the hardware demo](https://img.youtube.com/vi/oP3WBDNjDTk/maxresdefault.jpg)](https://youtu.be/oP3WBDNjDTk)
+
+Click the image above to watch the 3-bit Gray code counter running on real hardware.
+
 ## Overview
 A Gray code is a binary numbering system in which only **one bit changes** between two consecutive values. In a normal binary counter, several bits can change at once (for example 011 → 100 changes all three bits). Because real signals never switch at exactly the same instant, this can create short wrong values, called glitches. A Gray code counter avoids this problem, which is why it is used in rotary encoders, analog-to-digital converters, and FIFO pointers that cross clock domains.
 
@@ -66,13 +72,7 @@ The design was synthesized using Yosys and the schematic was generated using Gra
 ![Circuit Diagram](bit3graycounter.png)
 
 ## Hardware Implementation
-The counter was also implemented and tested on physical hardware. The output bits were observed on LEDs, and they follow the same Gray code sequence seen in the simulation.
-
-**Demo video:**
-
-<video src="https://github.com/gopikasujana/3-bit-gray-code-counter/raw/main/bit3graycodecountervid.mp4" controls width="600"></video>
-
-If the video does not play above, [click here to watch or download it](https://github.com/gopikasujana/3-bit-gray-code-counter/raw/main/bit3graycodecountervid.mp4).
+The counter was also implemented and tested on physical hardware. The output bits were observed on LEDs, and they follow the same Gray code sequence seen in the simulation. The full working demo is shown in the video at the top of this page.
 
 ## How to Run
 Compile and simulate:
