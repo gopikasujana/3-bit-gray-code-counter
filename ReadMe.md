@@ -1,16 +1,11 @@
-# 3-Bit Gray Code Counter Using Verilog HDL
+# 3-Bit Gray Code Counter
 
-## Project Overview
-A 3-bit Gray code counter implemented using Verilog HDL. The project includes the RTL design, a testbench for functional verification, simulation waveforms, and a Yosys-generated schematic.
+A 3-bit Gray code counter designed in Verilog, verified using a testbench and GTKWave, synthesized using Yosys, and implemented on real hardware as a semester project.
 
-## Features
-- Three-bit Gray code counting sequence
-- Synchronous, active-high reset
-- Negative-edge-triggered operation
-- Verilog RTL implementation
-- Functional simulation using Icarus Verilog
-- Waveform inspection using GTKWave
-- RTL and synthesized schematic generation using Yosys
+In a Gray code sequence only one bit changes between consecutive states, which avoids glitches in digital systems.
+
+## Counting Sequence
+000 → 001 → 011 → 010 → 110 → 111 → 101 → 100 → 000
 
 ## Tools Used
 - Verilog HDL
@@ -22,16 +17,31 @@ A 3-bit Gray code counter implemented using Verilog HDL. The project includes th
 ## Files
 - `bit3graycounter.v` — Counter RTL design
 - `bit3graycounter_tb.v` — Simulation testbench
-- `docs/waveform.png` — Verified simulation waveform
-- `docs/graycounter_rtl.svg` — RTL schematic
-- `docs/graycounter_synth.svg` — Synthesized schematic
+- `bit3graycounter.vcd` — Simulation dump file
+- `bit3graycounterwaveform.png` — Verified simulation waveform
+- `bit3garycodecountersch.png` — Synthesized schematic
+- `bit3graycounter.png` — Circuit diagram
+- `bit3graycodecountervid.mp4` — Hardware demo video
 
 ## Verification
 The design was simulated using the testbench, and the output waveform was inspected using GTKWave.
+
+![Simulation Waveform](bit3graycounterwaveform.png)
+
+## Synthesis
+The design was synthesized using Yosys and the schematic was generated using Graphviz.
+
+![Synthesized Schematic](bit3garycodecountersch.png)
+
+## Hardware Implementation
+The counter was also implemented and tested on physical hardware. Watch the demo video below.
+
+(Drag and drop bit3graycodecountervid.mp4 here to embed it)
 
 ## Learning Outcomes
 - Translating digital logic equations into Verilog
 - Writing clocked sequential logic
 - Implementing synchronous reset
 - Developing a testbench and inspecting simulation waveforms
-- Generating schematics with Yosys
+- Synthesizing a design with Yosys and viewing the schematic
+- Building and testing the design on real hardware
